@@ -59,7 +59,7 @@ export default {
     console.log("manage mounted");
   },
   unmounted() {
-    console.log("mange unmounted");
+    console.log("manage unmounted");
   },
   async created() {
     const snapshot = await songsCollection
@@ -93,6 +93,7 @@ export default {
       this.unsavedFlag = value;
     },
   },
+
   beforeRouteLeave(to, from, next) {
     if (!this.unsavedFlag) {
       next();
@@ -104,6 +105,7 @@ export default {
       // next takes a boolean value, which will be returned by the alert confirm
       next(leave);
     }
+    console.log("to", to, "from", from, "next", next);
   },
   // beforeRouteLeave(to, from, next) {
   //   this.$refs.upload.cancelUploads();

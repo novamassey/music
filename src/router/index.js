@@ -67,6 +67,8 @@ router.beforeEach((to, from, next) => {
   }
 });
 
+export default router;
+
 // using modules in store method
 // router.beforeEach((to, from, next) => {
 //   //   console.log(to.matched, from);
@@ -81,5 +83,3 @@ router.beforeEach((to, from, next) => {
 //     next({ name: "home" });
 //   }
 // });
-
-export default router;
