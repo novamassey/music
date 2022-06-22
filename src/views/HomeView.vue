@@ -76,9 +76,9 @@ export default {
   mounted() {
     console.log("home mounted");
   },
-  unmounted() {
-    console.log("home unmounted");
-  },
+  // unmounted() {
+  //   console.log("home unmounted");
+  // },
   async created() {
     this.getSongs();
 

@@ -122,9 +122,9 @@ export default {
   mounted() {
     console.log("song mounted");
   },
-  unmounted() {
-    console.log("song unmounted");
-  },
+  // unmounted() {
+  //   console.log("song unmounted");
+  // },
   async created() {
     const docSnapshot = await songsCollection.doc(this.$route.params.id).get();
 

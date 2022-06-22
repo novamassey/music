@@ -11,8 +11,8 @@ export default {
   mounted() {
     console.log("about mounted");
   },
-  unmounted() {
-    console.log("about unmounted");
-  },
+  // unmounted() {
+  //   console.log("about unmounted");
+  // },
 };
 </script>

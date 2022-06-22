@@ -1,40 +1,35 @@
 <template>
-  <!-- eslint-disable  -->
-  <main>
-    <section class="container mx-auto mt-6">
-      <div class="md:grid md:grid-cols-3 md:gap-4">
-        <div class="col-span-1">
-          <AppUpload ref="upload" :addSong="addSong"></AppUpload>
-        </div>
-        <div class="col-span-2">
-          <div
-            class="bg-white rounded border border-gray-200 relative flex flex-col"
-          >
-            <div class="px-6 pt-6 pb-5 font-bold border-b border-gray-200">
-              <span class="card-title">{{ $t("manage.my_songs") }}</span>
-              <i
-                class="fa fa-compact-disc float-right text-green-400 text-2xl"
-              ></i>
-            </div>
-            <div class="p-6">
-              <!-- Composition Items -->
-              <CompositionItem
-                v-for="(song, index) in songs"
-                :key="song.docID"
-                :song="song"
-                :updateSong="updateSong"
-                :index="index"
-                :removeSong="removeSong"
-                :updateUnsavedFlag="updateUnsavedFlag"
-              ></CompositionItem>
-            </div>
+  <section class="container mx-auto mt-6">
+    <div class="md:grid md:grid-cols-3 md:gap-4">
+      <div class="col-span-1">
+        <app-upload ref="upload" :addSong="addSong" />
+      </div>
+      <div class="col-span-2">
+        <div
+          class="bg-white rounded border border-gray-200 relative flex flex-col"
+        >
+          <div class="px-6 pt-6 pb-5 font-bold border-b border-gray-200">
+            <span class="card-title">{{ $t("manage.my_songs") }}</span>
+            <i
+              class="fa fa-compact-disc float-right text-green-400 text-2xl"
+            ></i>
+          </div>
+          <div class="p-6">
+            <!-- Composition Items -->
+            <composition-item
+              v-for="(song, i) in songs"
+              :key="song.docID"
+              :song="song"
+              :updateSong="updateSong"
+              :index="i"
+              :removeSong="removeSong"
+              :updateUnsavedFlag="updateUnsavedFlag"
+            />
           </div>
         </div>
       </div>
-    </section>
-  </main>
-
-  <!-- eslint-disable  -->
+    </div>
+  </section>
 </template>
 
 <script>
@@ -58,9 +53,9 @@ export default {
   mounted() {
     console.log("manage mounted");
   },
-  unmounted() {
-    console.log("manage unmounted");
-  },
+  // unmounted() {
+  //   console.log("manage unmounted");
+  // },
   async created() {
     const snapshot = await songsCollection
       .where("uid", "==", auth.currentUser.uid)
