@@ -2,16 +2,16 @@ import { createStore } from "vuex";
 // import { auth, usersCollection } from "@/includes/firebase";
 // import { Howl } from "howler";
 // import helper from "@/includes/helper";
-import auth from "./modules/auth";
-import player from "./modules/player";
-// import modules from "./modules";
+// import auth from "./modules/auth";
+// import player from "./modules/player";
+import modules from "./modules";
 
 export default createStore({
-  // modules,
-  modules: {
-    auth,
-    player,
-  },
+  modules,
+  // modules: {
+  //   auth,
+  //   player,
+  // },
   // state: {
   //   authModalShow: false,
   //   userLoggedIn: false,

@@ -1,20 +1,20 @@
-// import camelCase from "lodash/camelCase";
+import camelCase from "lodash/camelCase";
 
-// const requireModule = require.context(".", false, /\.js$/);
-// const modules = {};
+const requireModule = require.context(".", false, /\.js$/);
+const modules = {};
 
-// requireModule.keys().forEach((fileName) => {
-//   if (fileName === "./index.js") {
-//     return;
-//   }
-//   const moduleConfig = requireModule(fileName);
+requireModule.keys().forEach((fileName) => {
+  if (fileName === "./index.js") {
+    return;
+  }
+  const moduleConfig = requireModule(fileName);
 
-//   const moduleName = camelCase(fileName.replace(/(\.\/|\.js)/g, ""));
+  const moduleName = camelCase(fileName.replace(/(\.\/|\.js)/g, ""));
 
-//   modules[moduleName] = moduleConfig.default || moduleConfig;
-// });
+  modules[moduleName] = moduleConfig.default || moduleConfig;
+});
 
-// export default modules;
+export default modules;
 
 // require.context is avail through webpack, takes three arguments, 1st
 //  directory to search, 2nd should be if webpack need to search sub directories,
