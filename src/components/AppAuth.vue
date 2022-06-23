@@ -115,10 +115,10 @@ export default {
   },
   computed: {
     // MAPSTATE
-    ...mapState(["authModalShow"]),
-    // ...mapState({
-    //   authModalShow: (state) => state.auth.authModalShow,
-    // }),
+    // ...mapState(["authModalShow"]),
+    ...mapState({
+      authModalShow: (state) => state.auth.authModalShow,
+    }),
     // MAP STATE WITH ALIAS, authModalShow =modal now
     // ...mapState({
     //   modal: "authModalShow",

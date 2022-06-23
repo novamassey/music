@@ -52,15 +52,30 @@ const router = createRouter({
 });
 
 //  before when no modules and only one store file
-router.beforeEach((to, from, next) => {
-  // console.log(to.matched);
+// router.beforeEach((to, from, next) => {
+//   // console.log(to.matched);
 
+//   if (!to.matched.some((record) => record.meta.requiresAuth)) {
+//     next();
+//     return;
+//   }
+
+//   if (store.state.userLoggedIn) {
+//     next();
+//   } else {
+//     next({ name: "home" });
+//   }
+// });
+
+// using modules in store method
+router.beforeEach((to, from, next) => {
+  //   console.log(to.matched, from);
   if (!to.matched.some((record) => record.meta.requiresAuth)) {
     next();
     return;
   }
 
-  if (store.state.userLoggedIn) {
+  if (store.state.auth.userLoggedIn) {
     next();
   } else {
     next({ name: "home" });
@@ -68,18 +83,3 @@ router.beforeEach((to, from, next) => {
 });
 
 export default router;
-
-// using modules in store method
-// router.beforeEach((to, from, next) => {
-//   //   console.log(to.matched, from);
-//   if (!to.matched.some((record) => record.meta.requiresAuth)) {
-//     next();
-//     return;
-//   }
-
-//   if (store.state.auth.userLoggedIn) {
-//     next();
-//   } else {
-//     next({ name: "home" });
-//   }
-// });
