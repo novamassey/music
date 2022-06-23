@@ -126,7 +126,7 @@ export default {
         this.in_submission = false;
         this.alert_variant = "bg-red-500";
         this.alert_msg = "Something went wrong!";
-        console.log(error, this.song.docID);
+        // console.log(error, this.song.docID);
         return;
       }
       this.updateSong(this.index, values);

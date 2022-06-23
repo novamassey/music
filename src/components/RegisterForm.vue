@@ -156,7 +156,7 @@ export default {
         this.reg_in_submission = false;
         this.reg_alert_variant = "bg-red-500";
         this.reg_alert_message = "An unexpected error occurred.";
-        console.log(error);
+        // console.log(error);
         return;
       }
 

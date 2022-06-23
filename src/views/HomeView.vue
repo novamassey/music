@@ -74,7 +74,7 @@ export default {
     };
   },
   mounted() {
-    console.log("home mounted");
+    // console.log("home mounted");
   },
   // unmounted() {
   //   console.log("home unmounted");

@@ -75,7 +75,7 @@ export default {
 
       this.login_alert_variant = "bg-green-500";
       this.login_alert_message = "Success! You are now logged in!";
-      console.log(values);
+      // console.log(values);
 
       // this wil refresh the page at end of login
       window.location.reload();

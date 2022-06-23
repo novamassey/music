@@ -14,7 +14,7 @@ export default {
     this.$store.registerModule("dummy", dummyModule);
   },
   mounted() {
-    console.log("about mounted");
+    // console.log("about mounted");
   },
   // unmounted() {
   //   console.log("about unmounted");

@@ -120,7 +120,7 @@ export default {
     };
   },
   mounted() {
-    console.log("song mounted");
+    // console.log("song mounted");
   },
   // unmounted() {
   //   console.log("song unmounted");

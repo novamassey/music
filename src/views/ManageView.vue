@@ -51,7 +51,7 @@ export default {
     };
   },
   mounted() {
-    console.log("manage mounted");
+    // console.log("manage mounted");
   },
   // unmounted() {
   //   console.log("manage unmounted");
@@ -100,7 +100,7 @@ export default {
       // next takes a boolean value, which will be returned by the alert confirm
       next(leave);
     }
-    console.log("to", to, "from", from, "next", next);
+    // console.log("to", to, "from", from, "next", next);
   },
   // beforeRouteLeave(to, from, next) {
   //   this.$refs.upload.cancelUploads();

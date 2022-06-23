@@ -34,9 +34,9 @@ const routes = [
     },
     component: ManageView,
     beforeEnter: (to, from, next) => {
-      console.log("manage route guard");
+      // console.log("manage route guard");
       next();
-      console.log("to:", to, "from:", from, "next:", next);
+      // console.log("to:", to, "from:", from, "next:", next);
     },
   },
   {
