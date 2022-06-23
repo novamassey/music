@@ -2,6 +2,8 @@
   <!-- eslint-disable vuejs-accessibility/label-has-for-->
   <!-- eslint-disable max-len -->
   <!-- Header -->
+
+  <!-- <base-button></base-button> -->
   <header id="header" class="bg-gray-700">
     <nav class="container mx-auto flex justify-start items-center py-5 px-4">
       <!-- App Name -->
