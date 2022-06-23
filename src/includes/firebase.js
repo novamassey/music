@@ -17,6 +17,7 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 const storage = firebase.storage();
 
+// PWA to persist data when connection lost
 db.enablePersistence().catch((error) => {
   console.log(`Firebase persistence error ${error.code}`);
 });

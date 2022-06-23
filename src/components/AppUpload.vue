@@ -73,6 +73,7 @@ export default {
         if (file.type !== "audio/mpeg") {
           return;
         }
+        //PWA CHANGES 230
         if (!navigator.onLine) {
           this.uploads.push({
             task: {},
