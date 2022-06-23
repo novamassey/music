@@ -1,9 +1,18 @@
+/* eslint-disable */
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "@/views/HomeView.vue";
-import AboutView from "@/views/AboutView.vue";
-import ManageView from "@/views/ManageView.vue";
-import SongView from "@/views/SongView.vue";
+// import HomeView from "@/views/HomeView.vue";
+// import AboutView from "@/views/AboutView.vue";
+// import ManageView from "@/views/ManageView.vue";
+// import SongView from "@/views/SongView.vue";
 import store from "@/store";
+
+// creating chunks so only views loaded when needed to save space
+const HomeView = () => import("@/views/HomeView.vue");
+const AboutView = () => import("@/views/AboutView.vue");
+const ManageView = () =>
+  import(/* webpackChunkName: "groupedChunk" */ "@/views/ManageView.vue");
+const SongView = () =>
+  import(/* webpackChunkName: "groupedChunk" */ "@/views/SongView.vue");
 
 const routes = [
   {
